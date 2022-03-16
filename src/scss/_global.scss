@@ -11,10 +11,11 @@ html {
 html,
 body {
     height: 100%;
+    font-family: "Lato", sans-serif;
 }
 
 body {
-    background-color: #0f1145;
+    background-color: #fff;
 }
 
 h1,
@@ -81,9 +82,9 @@ input {
     margin: 0;
 }
 .container {
-    // max-width: 392px;
+    max-width: 1220px;
     width: 100%;
-    padding: 0 16px 0;
+    padding: 0 20px 0;
     margin: 0 auto;
 }
 .visually-hidden {
@@ -94,6 +95,20 @@ input {
     position: absolute;
     white-space: nowrap;
     width: 1px;
+}
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #f88600;
+    border-radius: 35px 5px;
+    padding: 0 42px;
+    font-weight: 600;
+    height: 60px;
+    color: $white;
+    width: auto;
+
+    // font-size: 20px;
 }
 .reset-button {
     margin: 0;
@@ -115,3 +130,9 @@ input {
 //     max-width: 100%;
 // 	margin: 0 auto;
 // }
+
+.sub-title {
+    font-weight: 700;
+    font-size: 36px;
+    color: $black;
+}

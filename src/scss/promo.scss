@@ -1,0 +1,71 @@
+.promo {
+    margin-bottom: 119px;
+    &__inner {
+        display: flex;
+    }
+    &__info {
+        padding-top: 87px;
+        margin-right: auto;
+        position: relative;
+    }
+    &__title {
+        font-weight: 800;
+        font-size: 50px;
+        line-height: 60px;
+
+        margin-bottom: 37px;
+        span {
+            color: $orange;
+        }
+    }
+    &__text {
+        @include font(20px, 24px);
+        margin-bottom: 44px;
+    }
+    &__button {
+        font-size: 20px;
+    }
+    &__image {
+        max-width: 534px;
+        max-height: 484px;
+        position: relative;
+        z-index: 2;
+        &::after,
+        &::before {
+            content: "";
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            width: 176px;
+            height: 193px;
+
+            z-index: -1;
+        }
+        &::after {
+            background-image: url(../images/promo-dec-picture3.svg);
+            bottom: -50px;
+            right: 14px;
+        }
+        &::before {
+            background-image: url(../images/promo-dec-picture3.svg);
+            left: -88px;
+            top: 22px;
+            transform: rotate(180deg);
+        }
+        img {
+            border-radius: 8px 8px 8px 200px;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    &__decoration {
+        position: absolute;
+        z-index: -1;
+        bottom: -178px;
+        right: -15px;
+    }
+}

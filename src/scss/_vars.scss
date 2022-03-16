@@ -1,8 +1,17 @@
+//vars
+$orange: #f88600;
+$black: #3a3126;
+$grey: #6d675f;
+$white: #fff;
+
+//mixins
+
 @mixin font($a, $b) {
     font-size: $a;
     line-height: $b;
     // font-weight: $c;
     // color: $d;
+    color: $grey;
 }
 @mixin flex-center {
     display: flex;
