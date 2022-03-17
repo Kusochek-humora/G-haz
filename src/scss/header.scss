@@ -1,9 +1,12 @@
 .header {
     padding: 60px 0 34px 0;
+
     &__inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+    &__logo_examples {
     }
     &__logo {
         font-weight: 800;
@@ -44,6 +47,223 @@
             background-color: $orange;
             bottom: -2px;
             left: 0;
+        }
+    }
+    .burger__button {
+        display: none;
+        flex-direction: column;
+
+        position: relative;
+        z-index: 15;
+
+        order: 4;
+        margin-left: auto;
+        &.active {
+            span {
+                background-color: rgba(0, 0, 0, 1);
+            }
+            span:first-child {
+                transform: rotate(45deg);
+                bottom: -5px;
+            }
+            span:nth-child(2) {
+                width: 0;
+                height: 0;
+            }
+            span:last-child {
+                top: -5px;
+                transform: rotate(-45deg);
+            }
+        }
+        span {
+            position: relative;
+            transition: 0.3s all;
+            margin-bottom: 4px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            width: 18px;
+            height: 2px;
+            background-color: rgba(0, 0, 0, 0.54);
+        }
+    }
+    .outter {
+        display: none;
+        position: fixed;
+        z-index: 20;
+        top: 0;
+        left: 0;
+        min-height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0);
+        width: 100%;
+        visibility: hidden;
+        transition: all cubic-bezier(0.81, 0.16, 0.41, 0.98) 0.5s;
+        &.active {
+            visibility: visible;
+            background-color: rgba($color: $black, $alpha: 0.7);
+        }
+    }
+    .burger__nav {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        max-width: 500px;
+        width: 100%;
+        min-height: 100%;
+        background-color: $white;
+        padding-top: 34px;
+        padding-left: 30px;
+        visibility: hidden;
+        transform: translateX(-100%);
+        transition: all cubic-bezier(0.81, 0.16, 0.41, 0.98) 0.5s;
+        &.active {
+            visibility: visible;
+            transform: translateX(0);
+        }
+    }
+    .burger__list {
+        &-item {
+            margin-bottom: 22px;
+            &:last-child {
+                margin-bottom: 0;
+                a::before {
+                    background-image: url(../images/burger-item8.svg);
+                    width: 21px;
+                    height: 21px;
+                }
+            }
+            &:first-child {
+                a::before {
+                    background-image: url(../images/burger-item1.svg);
+                    width: 21px;
+                    height: 21px;
+                }
+            }
+            &:nth-child(2) {
+                a::before {
+                    background-image: url(../images/burger-item2.svg);
+                    width: 21px;
+                    height: 21px;
+                }
+            }
+            &:nth-child(3) {
+                a::before {
+                    background-image: url(../images/burger-item3.svg);
+                    width: 21px;
+                    height: 21px;
+                }
+            }
+            &:nth-child(4) {
+                a::before {
+                    background-image: url(../images/burger-item4.svg);
+                    width: 21px;
+                    height: 21px;
+                }
+            }
+            &:nth-child(5) {
+                a::before {
+                    background-image: url(../images/burger-item5.svg);
+                    width: 21px;
+                    height: 21px;
+                }
+            }
+            &:nth-child(6) {
+                a::before {
+                    background-image: url(../images/burger-item6.svg);
+                    width: 21px;
+                    height: 21px;
+                }
+            }
+            &:nth-child(7) {
+                a::before {
+                    background-image: url(../images/burger-item7.svg);
+                    width: 21px;
+                    height: 21px;
+                }
+            }
+        }
+        &-link {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            color: $black;
+            padding-left: 36px;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                top: 3px;
+            }
+        }
+    }
+    .burger__decoration {
+        position: absolute;
+        &:first-of-type {
+            right: 0;
+            top: 0;
+        }
+        &:last-of-type {
+            left: 0;
+            top: 440px;
+        }
+    }
+    .burger__logo {
+        display: inline-block;
+        font-weight: 800;
+        font-size: 24px;
+        color: $orange;
+        margin-bottom: 43px;
+    }
+
+    //media query
+    @media screen and (max-width: 1250px) {
+        &__logo {
+            font-size: 24px;
+        }
+        &__tel {
+            font-size: 20px;
+        }
+        &__list {
+            &-item {
+                margin-right: 25px;
+            }
+            &-link {
+                font-size: 18px;
+            }
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .outter {
+            display: inline-block;
+            z-index: 20;
+        }
+        .burger__nav {
+            display: inline-block;
+            z-index: 20;
+        }
+
+        .burger__button {
+            display: flex;
+            z-index: 21;
+        }
+        &__inner {
+            justify-content: start;
+        }
+        &__nav {
+            display: none;
+        }
+        &__logo {
+            margin-right: 30px;
+        }
+        &__tel {
+            &::after {
+                display: none;
+            }
         }
     }
 }

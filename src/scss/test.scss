@@ -1,3 +1,21 @@
+.test-examples {
+    margin-bottom: 88px;
+    &__title {
+        margin-bottom: 27px;
+    }
+    &__text {
+        margin-bottom: 31px;
+        @include font(20px, 24px);
+        span {
+            color: $orange;
+        }
+    }
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 .test {
     margin-bottom: 75px;
     padding: 44px 0;

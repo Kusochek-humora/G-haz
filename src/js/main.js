@@ -22,13 +22,11 @@ featureItemArr.forEach((el) => {
 const stepsArr = document.querySelectorAll('.step'),
     formButtonNextArr = document.querySelectorAll('.form__button'),
     formButtonBackArr = document.querySelectorAll('.back');
-formButtonBackArr.forEach((item, index) => {
-    console.log(formButtonBackArr[index])
+formButtonBackArr.forEach((item, index) => {// back
     item.addEventListener('click', (e) => {
-        if (e.target == formButtonBackArr[0]) {
+        if (e.target === formButtonBackArr[0]) {
             stepsArr[0].classList.add('active')
             stepsArr[1].classList.remove('active');
-            console.log('1')
         }
         else {
             stepsArr.forEach(item => {
@@ -36,7 +34,7 @@ formButtonBackArr.forEach((item, index) => {
             })
             stepsArr[index].classList.add('active');
         }
-        if (e.target == formButtonBackArr[5]) {
+        if (e.target === formButtonBackArr[formButtonBackArr.length - 1]) {
             stepsArr.forEach(item => {
                 item.classList.remove('active')
             })
@@ -44,16 +42,30 @@ formButtonBackArr.forEach((item, index) => {
         }
     })
 })
-formButtonNextArr.forEach((item, index) => {
+formButtonNextArr.forEach((item, index) => { // next 
     item.addEventListener('click', (e) => {
         stepsArr[index + 1].classList.add('active')
         stepsArr[index].classList.remove('active');
     })
 })
-stepsArr.forEach(item => {
-
-})
 // END FORM STEPS
+
+
+// START BURGER
+const burgerButton = document.querySelector('.burger__button'),
+    burgerWrapper = document.querySelector('.burger__nav'),
+    outterBurger = document.querySelector('.outter');
+burgerButton.addEventListener('click', (e) => {
+    burgerButton.classList.toggle('active');
+    burgerWrapper.classList.toggle('active');
+    outterBurger.classList.toggle('active');
+})
+outterBurger.addEventListener('click', (e) => {
+    burgerButton.classList.remove('active');
+    burgerWrapper.classList.remove('active');
+    outterBurger.classList.remove('active');
+})
+// END BURGER
 
 
 
@@ -86,13 +98,18 @@ platesButtons.forEach((item, index) => {
 const swiper = new Swiper('.comments__swiper', {
     // Optional parameters
     direction: 'horizontal',
-    loop: true,
+    loop: false,
     slidesPerView: 3,
     slidesPerGroup: 1,
     spaceBetween: 20,
     autoplay: {
         delay: 5000,
         disableOnInteraction: false
-    }
+    },
+    pagination: {
+        el: '.comments__pagination',
+        type: 'bullets',
+        clickable: true
+    },
 });
 // END SWIPER

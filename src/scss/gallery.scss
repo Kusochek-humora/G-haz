@@ -1,19 +1,19 @@
 .gallery {
     position: relative;
-
+    margin-bottom: 87px;
+    &__decoration_other {
+        position: absolute;
+        z-index: -1;
+        left: -4%;
+        bottom: -8% !important;
+    }
     &__decoration {
         position: absolute;
         z-index: -1;
-        background-image: url(../images/gallery-dec-picture.svg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 176px;
-        height: 193px;
-        bottom: 66px;
-        left: -46px;
+        left: -4%;
+        bottom: 11%;
     }
-    margin-bottom: 87px;
+
     &__inner {
         position: relative;
         display: flex;
@@ -54,5 +54,38 @@
     }
     &__button {
         font-size: 20px;
+    }
+}
+.gallery-examples {
+    margin-top: 53px;
+}
+.gallery-bathroom {
+    position: relative;
+    margin-bottom: 107px;
+    &__decoration {
+        position: absolute;
+        left: 15%;
+        top: 4%;
+        z-index: -1;
+    }
+}
+.gallery-room,
+.gallery-wardrob {
+    margin-bottom: 117px;
+}
+.gallery-room,
+.gallery-wardrob,
+.gallery-bathroom {
+    @media screen and (max-width: 1250px) {
+        .gallery__box {
+            justify-content: flex-start;
+            &-item {
+            
+                margin-bottom: 24px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
     }
 }

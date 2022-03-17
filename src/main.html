@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <!--#include virtual="/templates/_head.html" -->
-
 <body class="wrapper">
-
     <!--#include virtual="/templates/_header.html" -->
     <main class="content">
         <section class="promo">
@@ -322,7 +319,7 @@
                 </div>
             </div>
         </section>
-        <section class="plates">
+        <section class="plates" id="plates">
             <div class="plates__decoration"></div>
             <div class="plates__decoration"><svg width="415" height="385" viewBox="0 0 415 385" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -407,11 +404,16 @@
                 </div>
             </div>
         </section>
-        <section class="gallery">
-
+        <section class="gallery" id="complete">
             <div class="container gallery-container">
                 <div class="gallery__inner">
-                    <div class="gallery__decoration"></div>
+                    <div class="gallery__decoration"><svg width="176" height="193" viewBox="0 0 176 193" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.1"
+                                d="M-1.52588e-05 5C-1.52588e-05 2.23858 2.23856 0 4.99998 0L171 0C173.761 0 176 2.23858 176 5L176 188C176 190.761 173.761 193 171 193H90C40.2944 193 -1.52588e-05 152.706 -1.52588e-05 103L-1.52588e-05 5Z"
+                                fill="#F88600" />
+                        </svg>
+                    </div>
                     <h2 class="gallery__title sub-title">Уже выполненые кухни</h2>
                     <div class="gallery__box">
                         <div class="gallery__box-item"><img src="images/gallery-kitchen-picture1.png"
@@ -437,58 +439,115 @@
                 </div>
             </div>
         </section>
-        <section class="comments">
+        <section class="comments" id="comments">
+            <div class="comments__decoration"><svg width="193" height="176" viewBox="0 0 193 176" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.1"
+                        d="M5 176C2.23858 176 -9.78513e-08 173.761 -2.18557e-07 171L-7.47465e-06 4.99998C-7.59535e-06 2.23856 2.23857 -1.53566e-05 4.99999 -1.54773e-05L188 -2.34765e-05C190.761 -2.35972e-05 193 2.23855 193 4.99998L193 86C193 135.706 152.706 176 103 176L5 176Z"
+                        fill="#F88600" />
+                </svg>
+            </div>
             <div class="container comments-container">
                 <div class="comments__inner">
                     <h2 class="comments__title sub-title">
                         Отзывы
                     </h2>
-                    <div class="swiper comments__swiper">
-                        <div class="swiper-wrapper comments__swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="comments__swiper-item">
-                                    <span class="comments__swiper-name">
-                                        Мухамед
-                                    </span>
-                                    <span class="comments__swiper-city">
-                                        Нур-Султан
-                                    </span>
-                                    <p class="comments__swiper-text">
-                                        Также как современная методология разработки играет важную роль в формировании
-                                        своевременного выполнения сверхзадачи. Как уже неоднократно упомянуто.
-                                    </p>
+                    <div class="comments__box">
+                        <div class="swiper comments__swiper">
+                            <div class="swiper-wrapper comments__swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="comments__swiper-item">
+                                        <span class="comments__swiper-name">
+                                            Мухамед
+                                        </span>
+                                        <span class="comments__swiper-city">
+                                            Нур-Султан
+                                        </span>
+                                        <p class="comments__swiper-text">
+                                            Также как современная методология разработки играет важную роль в
+                                            формировании
+                                            своевременного выполнения сверхзадачи. Как уже неоднократно упомянуто.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide ">
+                                    <div class="comments__swiper-item">
+                                        <span class="comments__swiper-name">
+                                            Инвера
+                                        </span>
+                                        <span class="comments__swiper-city">
+                                            Караганда
+                                        </span>
+                                        <p class="comments__swiper-text">
+                                            Господа, семантический разбор внешних противодействий предоставляет широкие
+                                            возможности для глубокомысленных рассуждений. Противоположная точка зрения.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide ">
+                                    <div class="comments__swiper-item">
+                                        <span class="comments__swiper-name">
+                                            Альтаир
+                                        </span>
+                                        <span class="comments__swiper-city">
+                                            Павлодар
+                                        </span>
+                                        <p class="comments__swiper-text">
+                                            Как уже неоднократно упомянуто, многие известные личности объявлены
+                                            нарушающими
+                                            общечеловеческие нормы этики и морали. Но постоянный количественный рост и.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide ">
+                                    <div class="comments__swiper-item">
+                                        <span class="comments__swiper-name">
+                                            Ян
+                                        </span>
+                                        <span class="comments__swiper-city">
+                                            Берлин
+                                        </span>
+                                        <p class="comments__swiper-text">
+                                            Господа, семантический разбор внешних противодействий предоставляет широкие
+                                            возможности для глубокомысленных рассуждений. Противоположная точка зрения.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide ">
+                                    <div class="comments__swiper-item">
+                                        <span class="comments__swiper-name">
+                                            Элвис
+                                        </span>
+                                        <span class="comments__swiper-city">
+                                            Талгар
+                                        </span>
+                                        <p class="comments__swiper-text">
+                                            Как уже неоднократно упомянуто, многие известные личности объявлены
+                                            нарушающими
+                                            общечеловеческие нормы этики и морали. Но постоянный количественный рост и.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide ">
+                                    <div class="comments__swiper-item">
+                                        <span class="comments__swiper-name">
+                                            Элвис
+                                        </span>
+                                        <span class="comments__swiper-city">
+                                            Талгар
+                                        </span>
+                                        <p class="comments__swiper-text">
+                                            Как уже неоднократно упомянуто, многие известные личности объявлены
+                                            нарушающими
+                                            общечеловеческие нормы этики и морали. Но постоянный количественный рост и.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide ">
-                                <div class="comments__swiper-item">
-                                    <span class="comments__swiper-name">
-                                        Инвера
-                                    </span>
-                                    <span class="comments__swiper-city">
-                                        Караганда
-                                    </span>
-                                    <p class="comments__swiper-text">
-                                        Господа, семантический разбор внешних противодействий предоставляет широкие
-                                        возможности для глубокомысленных рассуждений. Противоположная точка зрения.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide ">
-                                <div class="comments__swiper-item">
-                                    <span class="comments__swiper-name">
-                                        Альтаир
-                                    </span>
-                                    <span class="comments__swiper-city">
-                                        Павлодар
-                                    </span>
-                                    <p class="comments__swiper-text">
-                                        Как уже неоднократно упомянуто, многие известные личности объявлены нарушающими
-                                        общечеловеческие нормы этики и морали. Но постоянный количественный рост и.
-                                    </p>
-                                </div>
-                            </div>
-                     
+
                         </div>
+                    </div>
+                    <div class="comments__pagination">
 
                     </div>
                     <p class="comments__text">
@@ -496,9 +555,110 @@
                     </p>
                 </div>
         </section>
+        <section class="gallery gallery-room">
+
+            <div class="container gallery-container">
+                <div class="gallery__inner">
+
+                    <h2 class="gallery__title sub-title">Спальные команты</h2>
+                    <div class="gallery__box">
+                        <div class="gallery__box-item"><img src="images/gallery-room-picture1.png"
+                                alt="Спальные команта" class="gallery__box-image"></div>
+                        <div class="gallery__box-item"><img src="images/gallery-room-picture2.png"
+                                alt="Спальные команта" class="gallery__box-image"></div>
+                        <div class="gallery__box-item"><img src="images/gallery-room-picture3.png"
+                                alt="Спальные команта" class="gallery__box-image"></div>
+                    </div>
+                    <button class="button gallery__button" type="button">
+                        Обсудить проект
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="gallery gallery-wardrob">
+
+            <div class="container gallery-container">
+                <div class="gallery__inner">
+                    <h2 class="gallery__title sub-title">Гардеробные</h2>
+                    <div class="gallery__box">
+                        <div class="gallery__box-item"><img src="images/gallery-wardrob-picture1.png"
+                                alt="Гардеробная команта" class="gallery__box-image"></div>
+                        <div class="gallery__box-item"><img src="images/gallery-wardrob-picture2.png"
+                                alt="Гардеробная команта" class="gallery__box-image"></div>
+                        <div class="gallery__box-item"><img src="images/gallery-wardrob-picture3.png"
+                                alt="Гардеробная команта" class="gallery__box-image"></div>
+                    </div>
+                    <button class="button gallery__button" type="button">
+                        Обсудить проект
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="gallery gallery-bathroom">
+            <div class="gallery-bathroom__decoration"><svg width="176" height="193" viewBox="0 0 176 193" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.1"
+                        d="M176 188C176 190.761 173.761 193 171 193L5 193C2.23857 193 1.95703e-07 190.761 4.37114e-07 188L1.64355e-05 5C1.66769e-05 2.23857 2.23859 6.80812e-08 5.00002 3.09493e-07L86 7.39074e-06C135.706 1.17361e-05 176 40.2944 176 90L176 188Z"
+                        fill="#F88600" />
+                </svg>
+            </div>
+            <div class="container gallery-container">
+                <div class="gallery__inner">
+
+                    <h2 class="gallery__title sub-title">Для ванных комнат</h2>
+                    <div class="gallery__box">
+                        <div class="gallery__box-item"><img src="images/gallery-bathroom-picture1.png"
+                                alt="Ванная комната" class="gallery__box-image"></div>
+                        <div class="gallery__box-item"><img src="images/gallery-bathroom-picture2.png"
+                                alt="Ванная комната" class="gallery__box-image"></div>
+                        <div class="gallery__box-item"><img src="images/gallery-bathroom-picture3.png"
+                                alt="Ванная комната" class="gallery__box-image"></div>
+                    </div>
+                    <button class="button gallery__button" type="button">
+                        Обсудить проект
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="prepared">
+            <div class="prepared__decoration">
+                <svg width="96" height="176" viewBox="0 0 96 176" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.1"
+                        d="M188 -2.18557e-07C190.761 -9.78513e-08 193 2.23858 193 5L193 171C193 173.761 190.761 176 188 176L5.00001 176C2.23858 176 7.66344e-06 173.761 7.78414e-06 171L1.13248e-05 90C1.34975e-05 40.2944 40.2944 -6.67497e-06 90 -4.50227e-06L188 -2.18557e-07Z"
+                        fill="#F88600" />
+                </svg>
+
+            </div>
+            <div class="container prepared__container">
+                <div class="prepared__inner">
+                    <div class="prepared__box">
+                        <div class="prepared__box-item">
+                            <div class="prepared__box-image"><img src="images/prepared-picture1.png"
+                                    alt="дизайн проекта"></div>
+                            <p class="prepared__box-text">
+                                Если у вас уже есть дизайн<br> проект
+                            </p>
+                        </div>
+                        <div class="prepared__box-item">
+                            <div class="prepared__box-image"><img src="images/prepared-picture2.png"
+                                    alt="фото шаблон кухни"></div>
+                            <p class="prepared__box-text">
+                                Либо вы нашли фото кухни в<br> интернете
+                            </p>
+                        </div>
+                    </div>
+                    <p class="prepared__text">
+                        Оставляйте заявку или пишите нам на whatsapp,<br>
+                        мы уже готовы обсудить вашу будущую кухню
+                    </p>
+                    <button class="button prepared__button">
+                        Оставить заявку
+                    </button>
+                </div>
+            </div>
+        </section>
     </main>
     <!--#include virtual="/templates/_footer.html" -->
-
     <!--#include virtual="/templates/_scripts.html" -->
 </body>
 
