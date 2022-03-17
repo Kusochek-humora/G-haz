@@ -12,6 +12,7 @@ html,
 body {
     height: 100%;
     font-family: "Lato", sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -100,15 +101,68 @@ input {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: #f88600;
+    background-color: #f88600;
     border-radius: 35px 5px;
     padding: 0 42px;
     font-weight: 600;
     height: 60px;
     color: $white;
     width: auto;
-
     // font-size: 20px;
+}
+.button-grey {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b8b3ad;
+    border-radius: 35px 5px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    max-width: 165px;
+    width: 100%;
+    height: 49px;
+    display: flex;
+    margin-left: auto;
+    z-index: 1;
+    position: relative;
+    color: $white;
+    transition: 0.3s all;
+    &:hover {
+        background-color: #f88600;
+    }
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.button-back {
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 2px solid $orange;
+    border-radius: 35px 5px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    max-width: 165px;
+    width: 100%;
+    height: 49px;
+    display: flex;
+    z-index: 1;
+    position: relative;
+    color: $white;
+    transition: 0.3s all;
+    color: $orange;
+    &:hover {
+        background-color: #f88600;
+        color: $white;
+    }
 }
 .reset-button {
     margin: 0;

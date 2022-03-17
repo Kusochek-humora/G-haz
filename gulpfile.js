@@ -30,7 +30,9 @@ export const buildHtml = () => {
 
 export const buildJs = (done) => {
 	gulp.src([
-		'src/js/vendor/*.js'
+		'src/js/vendor/*.js',
+	
+		'node_modules/swiper/swiper-bundle.js',
 	])
 		.pipe(plumber())
 		.pipe(uglify())
@@ -59,6 +61,7 @@ export const buildJs = (done) => {
 export const buildCss = (done) => {
 	gulp.src([
 		'node_modules/normalize.css/normalize.css',
+		'node_modules/swiper/swiper-bundle.css',
 	])
 		.pipe(prefixer())
 		.pipe(csso())
