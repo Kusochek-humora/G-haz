@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "",
+  "description": "G-haz html, css , js",
   "scripts": {
     "start": "gulp"
   },
@@ -35,8 +35,18 @@
     "gulp-svgmin": "^3.0.0"
   },
   "dependencies": {
+    "jquery": "^3.6.0",
     "magnific-popup": "^1.1.0",
     "normalize.css": "^8.0.1",
     "swiper": "^8.0.7"
-  }
+  },
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kusochek-humora/G-haz.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kusochek-humora/G-haz/issues"
+  },
+  "homepage": "https://github.com/Kusochek-humora/G-haz#readme"
 }

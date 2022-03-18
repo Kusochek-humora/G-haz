@@ -172,9 +172,14 @@ const swiper = new Swiper('.comments__swiper', {
 });
 // END SWIPER
 
-//WINDOWS BREAKPOINT
 
+//POPUPS
 
+$('.open-form').magnificPopup();
+// $('.close-popup').click(function() {
+//     $.magnificPopup.close();
+// });
 
+$('.gallery__box-item').magnificPopup({ type: 'image' });
 
-//END BREAKPOINT
+//END POPUPS

@@ -1,0 +1,104 @@
+
+.mfp-container {
+    padding: 0 20px !important;
+}
+.close-popup{
+
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+.wrapper__popup {
+    position: relative;
+    max-width: 580px;
+    width: 100%;
+    min-height: 528px;
+    background-color: $white;
+    border: 2px solid #f88600;
+    border-radius: 20px;
+    margin: 0 auto;
+   
+}
+.form-popup {
+    height: 100%;
+    width: 100%;
+}
+.form-popup__wrapper {
+    padding-left: 49px;
+    padding-top: 85px;
+}
+.form-popup__box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.form-popup__box-title {
+    margin-bottom: 36px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #3a3126;
+}
+.form-popup__label-text,
+.form-popup__label-tel {
+    font-weight: 700;
+    font-size: 18px;
+    color: $black;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.form-popup__text {
+    margin-bottom: 15px;
+}
+.form-popup__text,
+.form-popup__tel {
+    padding: 0 20px;
+    box-shadow: 0px 0px 9px rgba(58, 49, 38, 0.09);
+    border-radius: 5px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    max-width: 479px;
+    width: 100%;
+    min-height: 64px;
+    &::placeholder {
+        font-weight: 700;
+        font-size: 18px;
+        color: #bdb8b2;
+    }
+}
+
+.button {
+    margin-top: 36px;
+}
+.form-popup__button {
+}
+@media screen and (max-width: 700px) {
+    .button {
+        margin-top: 20px !important;
+    }
+    .form-popup__box-title {
+        margin-bottom: 20px;
+        font-size: 22px;
+    }
+    .form-popup__button {
+        font-size: 16px !important;
+    }
+    .form-popup__text,
+    .form-popup__tel {
+        min-height: 50px;
+        font-size: 16px;
+        &::placeholder {
+            font-size: 16px;
+        }
+    }
+    .form-popup__label-text,
+    .form-popup__label-tel {
+        font-size: 16px;
+    }
+    .form-popup__wrapper {
+        padding: 20px 20px 0;
+    }
+    .wrapper__popup {
+        min-height: 350px;
+    }
+}
