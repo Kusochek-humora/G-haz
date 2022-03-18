@@ -175,11 +175,11 @@ const swiper = new Swiper('.comments__swiper', {
 
 //POPUPS
 
-$('.open-form').magnificPopup();
+$('.open-form').magnificPopup({ removalDelay: 300, mainClass: 'mfp-fade' });
 // $('.close-popup').click(function() {
 //     $.magnificPopup.close();
 // });
 
-$('.gallery__box-item').magnificPopup({ type: 'image' });
+$('.gallery__box-item').magnificPopup({ type: 'image', preload: [0, 2], mainClass: 'mfp-fade' });
 
 //END POPUPS
