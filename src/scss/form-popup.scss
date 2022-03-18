@@ -1,15 +1,18 @@
-
 .mfp-container {
     padding: 0 20px !important;
 }
-.close-popup{
-
+.close-popup {
     position: absolute;
     top: 30px;
     right: 30px;
 }
 .wrapper__popup {
-    position: relative;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     max-width: 580px;
     width: 100%;
     min-height: 528px;
@@ -17,7 +20,6 @@
     border: 2px solid #f88600;
     border-radius: 20px;
     margin: 0 auto;
-   
 }
 .form-popup {
     height: 100%;
@@ -25,17 +27,25 @@
 }
 .form-popup__wrapper {
     padding-left: 49px;
-    padding-top: 85px;
+    padding-top: 40px;
+    padding-right: 49px;
 }
 .form-popup__box {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
+.form-popup__box-text {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
 .form-popup__box-title {
-    margin-bottom: 36px;
     font-weight: 700;
-    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 26px;
     line-height: 29px;
     color: #3a3126;
 }
@@ -105,33 +115,33 @@
 /* overlay at start */
 .mfp-fade.mfp-bg {
     opacity: 0;
-  
+
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
-  }
-  /* overlay animate in */
-  .mfp-fade.mfp-bg.mfp-ready {
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
     opacity: 0.8;
-  }
-  /* overlay animate out */
-  .mfp-fade.mfp-bg.mfp-removing {
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
     opacity: 0;
-  }
-  
-  /* content at start */
-  .mfp-fade.mfp-wrap .mfp-content {
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
     opacity: 0;
-  
+
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
-  }
-  /* content animate it */
-  .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
     opacity: 1;
-  }
-  /* content animate out */
-  .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
     opacity: 0;
-  }
+}

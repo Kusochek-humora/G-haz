@@ -677,28 +677,32 @@
         </section>
     </main>
 
-    <div class="wrapper__popup" id="popup">
 
-
-        <form action="" class="form-popup">
-            <!-- <button class="close-popup" type="button">X</button> -->
-            <div class="form-popup__wrapper">
-                <div class="form-popup__box">
-                    <legend class="form-popup__box-title">
-                        Ваши данные
-                    </legend>
-                    <label class="form-popup__label-text" for="text2">Ваше имя</label>
-                    <input id="text2" type="text" class="form-popup__text" placeholder="Мухамед">
-                    <label class="form-popup__label-tel" for="tel">Ваше имя</label>
-                    <input id="tel2" type="tel2" class="form-popup__tel" placeholder="+7 707 775 7722">
-                    <button class="button form-popup__button">Отправить</button>
-                </div>
-            </div>
-        </form>
-    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!--#include virtual="/templates/_footer.html" -->
     <!--#include virtual="/templates/_scripts.html" -->
 </body>
+<div class="mfp-hide  wrapper__popup mpf-wrapper" id="popup">
+
+
+    <form action="" class="form-popup">
+        <!-- <button class="close-popup" type="button">X</button> -->
+        <div class="form-popup__wrapper">
+            <div class="form-popup__box">
+                <legend class="form-popup__box-title">
+                    Оставьте заявку для поулчения подробной информации
+                </legend>
+                <p class="form-popup__box-text">Наш менеджер свяжется с вами в течении 15 минут и ответит на
+                    все
+                    вопросы</p>
+                <label class="form-popup__label-text" for="text2">Ваше имя</label>
+                <input id="text2" type="text" class="form-popup__text" placeholder="Мухамед">
+                <label class="form-popup__label-tel" for="tel">Ваше имя</label>
+                <input id="tel2" type="tel2" class="form-popup__tel" placeholder="+7 707 775 7722">
+                <button class="button form-popup__button">Отправить</button>
+            </div>
+        </div>
+    </form>
+</div>
 
 </html>

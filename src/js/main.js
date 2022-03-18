@@ -174,7 +174,13 @@ const swiper = new Swiper('.comments__swiper', {
 
 
 //POPUPS
-
+// const openPopup = document.querySelectorAll('.open-form'),
+//     wrapperPopup = document.querySelector('.wrapper__popup');
+// openPopup.forEach(item => {
+//     item.addEventListener('click', () => {
+//         wrapperPopup.classList.add('active')
+//     })
+// })
 $('.open-form').magnificPopup({ removalDelay: 300, mainClass: 'mfp-fade' });
 // $('.close-popup').click(function() {
 //     $.magnificPopup.close();

@@ -68,7 +68,9 @@
     @media screen and (max-width: 820px) {
         &__box {
             justify-content: center !important;
+            margin-right: 0;
         }
+        
     }
     @media screen and (max-width: 499px) {
         &__decoration {
