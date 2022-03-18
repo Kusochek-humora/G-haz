@@ -54,6 +54,39 @@
             }
         }
     }
+    @media screen and (max-width: 1100px) {
+        &__side {
+            &-text {
+                font-size: 28px;
+                span {
+                    font-size: 38px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 840px) {
+        &__inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__side {
+            &-text {
+                margin-bottom: 30px;
+                br:nth-child(2) {
+                    display: none;
+                }
+                text-align: center;
+
+                span {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 840px){
+        margin-bottom: 84px;
+    }
 }
 .form {
     max-width: 580px;
@@ -173,6 +206,79 @@
             color: #3a3126;
         }
     }
+    @media screen and (max-width: 840px) {
+        &__finish {
+            min-height: 499px;
+        }
+        &__box-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        &__finish-text {
+            font-size: 24px;
+            margin-top: 33px;
+        }
+    }
+    @media screen and (max-width: 499px) {
+        &__box-title {
+            br {
+                display: none;
+            }
+        }
+        &__input-number,
+        &__input-text,
+        &__input-tel {
+            height: 57px;
+            font-size: 16px;
+            &::placeholder {
+                font-size: 14px;
+            }
+        }
+        &__input-number {
+            margin-bottom: 155px;
+        }
+        min-height: 432px;
+        &__finish {
+            padding: 0 20px;
+            min-height: 432px;
+            &-image {
+                width: 90px;
+                height: 104px;
+                margin-top: 40px;
+            }
+            &-button {
+                margin-top: 33px;
+            }
+            &-text {
+                br {
+                    display: none;
+                }
+            }
+        }
+        &__box-title_margin {
+            margin-bottom: 14px;
+        }
+        &__finish-button {
+            height: 40px;
+            border-radius: 20px 3px;
+            font-size: 18px;
+        }
+        &__button {
+            max-width: 119px;
+            height: 40px;
+            border-radius: 20px 3px;
+            font-size: 18px;
+        }
+        &__wrapper {
+            padding: 0 20px 44px;
+            min-height: 432px;
+        }
+        &__counter {
+            margin-top: 38px;
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+    }
 }
 .radio {
     position: relative;
@@ -181,6 +287,7 @@
     &:last-child {
         margin-bottom: 39px;
     }
+
     &-input:checked {
         & ~ label {
             background-color: $orange;
@@ -236,6 +343,7 @@
         @include font(18px, 22px);
         transition: 0.3s all;
     }
+
     img {
         width: 69px;
         height: 55px;
@@ -243,6 +351,28 @@
         margin-left: auto;
         object-fit: cover;
         object-position: center;
+    }
+    @media screen and (max-width: 499px) {
+        height: 55px;
+        margin-bottom: 18px;
+        &:nth-of-type(3) {
+            margin-bottom: 34px;
+        }
+        &-label {
+            height: 55px;
+            padding-right: 0;
+        }
+        &-text {
+            @include font(14px, 0px);
+        }
+        &-text_fsz {
+            font-size: 13px;
+
+        }
+        img {
+            width: 56px;
+            height: 45px;
+        }
     }
 }
 .button-wrapper {
@@ -257,8 +387,16 @@
     @include font(18px, 22px);
     margin-bottom: 12px;
     display: inline-block;
+    @media screen and (max-width: 499px) {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
 }
-
+.input-tel_margin{
+    @media screen and (max-width:499px){
+        margin-bottom: 47px;
+    }
+}
 .step {
     &.active {
         display: flex !important;

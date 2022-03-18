@@ -1,5 +1,56 @@
+
+
+// START BURGER
+const body = document.querySelector('body'),
+    burgerButton = document.querySelector('.burger__button'),
+    burgerWrapper = document.querySelector('.burger__nav'),
+    outterBurger = document.querySelector('.outter'),
+    burgerLinks = document.querySelectorAll('.burger__list-link');
+
+burgerButton.addEventListener('click', (e) => {
+    body.classList.toggle('active')
+    burgerButton.classList.toggle('active');
+    burgerWrapper.classList.toggle('active');
+    outterBurger.classList.toggle('active');
+})
+outterBurger.addEventListener('click', (e) => {
+    body.classList.remove('active')
+    burgerButton.classList.remove('active');
+    burgerWrapper.classList.remove('active');
+    outterBurger.classList.remove('active');
+})
+
+burgerLinks.forEach(item => {
+    burgerWrapper.addEventListener('click', (e) => {
+        if (e.target === item) {
+            body.classList.remove('active');
+            burgerButton.classList.remove('active');
+            burgerWrapper.classList.remove('active');
+            outterBurger.classList.remove('active');
+        }
+    })
+})
+window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1024) {
+        body.classList.remove('active');
+        burgerButton.classList.remove('active');
+        burgerWrapper.classList.remove('active');
+        outterBurger.classList.remove('active');
+    }
+    if (window.innerWidth > 499) {
+        swiper.update()
+    }
+})
+
+// END BURGER
+
+
+
+
+
 // START HOVER FEATURES BLOCK
 const featureItemArr = document.querySelectorAll('.features__list-item');
+
 function handleMouseEnter(el) {
     const children = el.parentNode.children;
     for (const child of children) {
@@ -51,21 +102,7 @@ formButtonNextArr.forEach((item, index) => { // next
 // END FORM STEPS
 
 
-// START BURGER
-const burgerButton = document.querySelector('.burger__button'),
-    burgerWrapper = document.querySelector('.burger__nav'),
-    outterBurger = document.querySelector('.outter');
-burgerButton.addEventListener('click', (e) => {
-    burgerButton.classList.toggle('active');
-    burgerWrapper.classList.toggle('active');
-    outterBurger.classList.toggle('active');
-})
-outterBurger.addEventListener('click', (e) => {
-    burgerButton.classList.remove('active');
-    burgerWrapper.classList.remove('active');
-    outterBurger.classList.remove('active');
-})
-// END BURGER
+
 
 
 
@@ -102,6 +139,7 @@ const swiper = new Swiper('.comments__swiper', {
     slidesPerView: 3,
     slidesPerGroup: 1,
     spaceBetween: 20,
+
     autoplay: {
         delay: 5000,
         disableOnInteraction: false
@@ -111,5 +149,32 @@ const swiper = new Swiper('.comments__swiper', {
         type: 'bullets',
         clickable: true
     },
+    breakpoints: {
+        1100: {
+            slidesPerView: 3,
+        },
+        800: {
+            slidesPerView: 2,
+        },
+
+        499: {
+            direction: 'horizontal',
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+        }, 0: {
+            direction: 'vertical',
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            effect: 'fade'
+        }
+
+    }
 });
 // END SWIPER
+
+//WINDOWS BREAKPOINT
+
+
+
+
+//END BREAKPOINT

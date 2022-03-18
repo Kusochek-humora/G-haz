@@ -55,6 +55,30 @@
     &__button {
         font-size: 20px;
     }
+    @media screen and (max-width: 820px){
+        &__box {
+            justify-content: center !important;
+           }
+    }
+    @media screen and (max-width: 499px) {
+        &__decoration {
+            display: none;
+        }
+        &__text {
+            @include font(18px, 22px);
+            margin-bottom: 24px;
+        }
+    
+        &__box-item {
+            max-width: 320px;
+            height: 204px;
+            margin-right: 0;
+            img {
+                width: 320px;
+                height: 204px;
+            }
+        }
+    }
 }
 .gallery-examples {
     margin-top: 53px;
@@ -80,7 +104,6 @@
         .gallery__box {
             justify-content: flex-start;
             &-item {
-            
                 margin-bottom: 24px;
                 &:last-child {
                     margin-bottom: 0;

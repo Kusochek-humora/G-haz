@@ -71,10 +71,59 @@
         position: absolute;
         left: 0;
         top: 53px;
+        svg:last-child {
+            display: none;
+        }
+        svg:first-child {
+            display: block;
+        }
     }
     &__decoration_other {
         position: absolute;
         bottom: 0;
         right: 0;
+    }
+    @media screen and (max-width: 720px) {
+        &__decoration {
+            svg:first-child {
+                display: none;
+            }
+            svg:last-child {
+                display: block;
+            }
+        }
+        &__decoration_other {
+            display: none;
+        }
+        &__logo {
+            margin-right: 0;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 28px;
+        }
+        &__list {
+            &:last-child {
+                margin-top: 36px;
+                width: 100%;
+                margin-left: 0;
+                text-align: center;
+            }
+        }
+        &__inner {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    @media screen and (max-width: 499px) {
+        &__logo {
+            font-size: 25px;
+            line-height: 30px;
+        }
+        &__list {
+            &-link {
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
     }
 }

@@ -11,7 +11,6 @@
     &__logo {
         font-weight: 800;
         font-size: 28px;
-        line-height: 34px;
         color: $orange;
     }
     &__nav {
@@ -59,6 +58,7 @@
         order: 4;
         margin-left: auto;
         &.active {
+            margin-right: 18px;
             span {
                 background-color: rgba(0, 0, 0, 1);
             }
@@ -82,7 +82,7 @@
             &:last-child {
                 margin-bottom: 0;
             }
-            width: 18px;
+            width: 25px;
             height: 2px;
             background-color: rgba(0, 0, 0, 0.54);
         }
@@ -117,6 +117,7 @@
         visibility: hidden;
         transform: translateX(-100%);
         transition: all cubic-bezier(0.81, 0.16, 0.41, 0.98) 0.5s;
+
         &.active {
             visibility: visible;
             transform: translateX(0);
@@ -238,6 +239,23 @@
         }
     }
     @media screen and (max-width: 1024px) {
+        padding: 24px 0 29px 0;
+        &__inner {
+            justify-content: start;
+        }
+        &__nav {
+            display: none;
+        }
+        &__logo {
+            margin-right: 30px;
+        }
+        &__tel {
+            &::after {
+                display: none;
+            }
+        }
+
+        //burgers
         .outter {
             display: inline-block;
             z-index: 20;
@@ -251,18 +269,21 @@
             display: flex;
             z-index: 21;
         }
+    }
+    @media screen and (max-width: 499px) {
         &__inner {
-            justify-content: start;
-        }
-        &__nav {
-            display: none;
+            align-items: center;
         }
         &__logo {
-            margin-right: 30px;
+            font-size: 24px;
         }
         &__tel {
-            &::after {
-                display: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        .burger__button {
+            &.active {
+                margin-right: 0;
             }
         }
     }
