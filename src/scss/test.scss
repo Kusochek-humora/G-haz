@@ -84,7 +84,7 @@
             }
         }
     }
-    @media screen and (max-width: 840px){
+    @media screen and (max-width: 840px) {
         margin-bottom: 84px;
     }
 }
@@ -367,7 +367,6 @@
         }
         &-text_fsz {
             font-size: 13px;
-
         }
         img {
             width: 56px;
@@ -392,9 +391,16 @@
         margin-bottom: 6px;
     }
 }
-.input-tel_margin{
-    @media screen and (max-width:499px){
+.input-tel_margin {
+    @media screen and (max-width: 499px) {
         margin-bottom: 47px;
+    }
+}
+.input-text,
+.input-tel,
+.input-number {
+    &.invalid {
+        border: 1px solid red;
     }
 }
 .step {

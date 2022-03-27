@@ -93,14 +93,96 @@ formButtonBackArr.forEach((item, index) => {// back
         }
     })
 })
+
 formButtonNextArr.forEach((item, index) => { // next 
     item.addEventListener('click', (e) => {
+
         stepsArr[index + 1].classList.add('active')
         stepsArr[index].classList.remove('active');
     })
 })
-// END FORM STEPS
 
+
+// END FORM STEPS
+//Validation form steps
+const fieldset = document.querySelectorAll('.form__wrapper'),
+    radioInputs = document.querySelectorAll('.radio-input'),
+    buttonGrey = document.querySelectorAll('.button-grey'),
+    simpleInputs = document.querySelectorAll('.input-simple'),
+    lastInputs = [document.querySelector('.input-text'), document.querySelector('.input-tel')],
+    inputKitchen = document.querySelectorAll('input[name=type_kitchen]'),
+    inputFacade = document.querySelectorAll('input[name=type_facade]'),
+    inputimplement = document.querySelectorAll('input[name=type_implement]'),
+    inputTabletop = document.querySelectorAll('input[name=type_tabletop');
+
+fieldset.forEach((fieldset, fieldsetIndex) => {
+    console.log(buttonGrey[fieldsetIndex])
+    fieldset.addEventListener('click', (e) => {
+        radioInputs.forEach((item, index) => {
+            if (e.target === item) {
+                console.log('qweqwe')
+                console.log(buttonGrey[fieldsetIndex + 1])
+                buttonGrey[fieldsetIndex].classList.add('orange')
+                buttonGrey[fieldsetIndex].removeAttribute('disabled')
+            }
+        })
+        if (e.target === document.querySelector('.input-number')) {
+            document.querySelector('.input-number').addEventListener('blur', (e) => {
+                console.log(e.target.value)
+                if (document.querySelector('.input-number').value === "") {
+                    document.querySelector('.input-number').classList.add('invalid')
+                    buttonGrey[fieldsetIndex].classList.remove('orange')
+                    buttonGrey[fieldsetIndex].disabled = true;
+                }
+
+
+                else {
+                    document.querySelector('.input-number').classList.remove('invalid')
+                    buttonGrey[fieldsetIndex].classList.add('orange')
+                    buttonGrey[fieldsetIndex].removeAttribute('disabled')
+                }
+            })
+        }
+        if (e.target === document.querySelector('.input-text')) {
+            document.querySelector('.input-text').addEventListener('blur', (e) => {
+                if (document.querySelector('.input-text').value === "") {
+                    document.querySelector('.input-text').classList.add('invalid')
+                }
+                else {
+                    document.querySelector('.input-text').classList.remove('invalid')
+
+                }
+            })
+        }
+        if (e.target === document.querySelector('.input-tel')) {
+            document.querySelector('.input-tel').addEventListener('blur', (e) => {
+                if (document.querySelector('.input-tel').value === "") {
+                    document.querySelector('.input-tel').classList.add('invalid')
+                }
+                else {
+                    document.querySelector('.input-tel').classList.remove('invalid')
+                }
+            })
+        }
+
+        lastInputs.forEach(i => {
+            i.addEventListener('blur', (e) => {
+                if (document.querySelector('.input-text').classList.contains('invalid') || document.querySelector('.input-tel').classList.contains('invalid')) {
+                    console.log('qweqwe')
+                    console.log(buttonGrey[fieldsetIndex + 1])
+                    buttonGrey[5].classList.remove('orange')
+                    buttonGrey[5].disabled = true;
+                }
+                else {
+                    buttonGrey[5].classList.add('orange')
+                    buttonGrey[5].removeAttribute('disabled')
+                }
+            })
+        })
+    })
+})
+
+// end validation form steps
 
 
 
@@ -135,7 +217,7 @@ platesButtons.forEach((item, index) => {
 const swiper = new Swiper('.comments__swiper', {
     // Optional parameters
     direction: 'horizontal',
-    loop: false,
+    loop: true,
     slidesPerView: 3,
     slidesPerGroup: 1,
     spaceBetween: 20,
@@ -188,4 +270,48 @@ $('.open-form').magnificPopup({ removalDelay: 300, mainClass: 'mfp-fade' });
 
 $('.gallery__box-item').magnificPopup({ type: 'image', preload: [0, 2], mainClass: 'mfp-fade' });
 
-//END POPUPS
+
+
+// const formSubmit = function () {
+
+// }
+$(".form-popup").submit(function (e) {
+    var th = $(this);
+    console.log(th)
+    $.ajax({
+        type: "POST",
+        url: "index.php", //Change
+        data: th.serialize()
+    }).done(function () {
+
+        alert("Ваша заявка отправлена!");
+
+        setTimeout(function () {
+            $('.mfp-close').click();
+            // Done Functions
+            th.trigger("reset");
+
+        }, 1000);
+    });
+    return false;
+});
+
+$(".test__form").submit(function (e) {
+var th = $(this);
+console.log(th)
+$.ajax({
+    type: "POST",
+    url: "test_index.php", //Change
+    data: th.serialize()
+}).done(function () {
+
+    alert("Ваша заявка отправлена!");
+
+    setTimeout(function () {
+        // Done Functions
+        th.trigger("reset");
+
+    }, 1000);
+});
+return false;
+});

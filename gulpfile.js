@@ -31,7 +31,7 @@ export const buildHtml = () => {
 export const buildJs = (done) => {
 	gulp.src([
 		'src/js/vendor/*.js',
-		// 'node_modules/tingle.js/src/tingle.js',
+
 		'node_modules/swiper/swiper-bundle.js',
 		'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
 	])
@@ -63,7 +63,6 @@ export const buildCss = (done) => {
 	gulp.src([
 		'node_modules/normalize.css/normalize.css',
 		'node_modules/swiper/swiper-bundle.css',
-		// 'node_modules/tingle.js/src/tingle.css',
 		'node_modules/magnific-popup/dist/magnific-popup.css'
 	])
 		.pipe(prefixer())

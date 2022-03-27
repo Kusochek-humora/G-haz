@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head lang="ru">
+<head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>G-haz</title>
-	<link rel="stylesheet" href="css/vendor.min.css?=1647794112676">
-	<link rel="stylesheet" href="css/main.min.css?=1647794112676">
+	<link rel="stylesheet" href="css/vendor.min.css?=1647944995699">
+	<link rel="stylesheet" href="css/main.min.css?=1647944995699">
 </head>
 
 <body class="wrapper">
@@ -21,22 +21,22 @@
             <nav class="header__nav nav">
                 <ul class="header__list">
                     <li class="header__list-item">
-                        <a href="main.html" class="header__list-link">
+                        <a hreindex.html" class="header__list-link">
                             Главная
                         </a>
                     </li>
                     <li class="header__list-item">
-                        <a href="main.html#test" class="header__list-link">
+                        <a href="#test" class="header__list-link">
                             Тест
                         </a>
                     </li>
                     <li class="header__list-item">
-                        <a href="main.html#comments" class="header__list-link">
+                        <a href="index.html#comments" class="header__list-link">
                             Отзывы
                         </a>
                     </li>
                     <li class="header__list-item">
-                        <a href="main.html#complete" class="header__list-link">
+                        <a href="index.html#complete" class="header__list-link">
                             Проекты
                         </a>
                     </li>
@@ -71,13 +71,13 @@
                     </svg>
                 </div>
                 <ul class="burger__list">
-                    <li class="burger__list-item"><a href="#" class="burger__list-link">Главная</a></li>
-                    <li class="burger__list-item"><a href="#" class="burger__list-link">Рассчитать стоимость</a></li>
-                    <li class="burger__list-item"><a href="#" class="burger__list-link">Фасады</a></li>
-                    <li class="burger__list-item"><a href="#" class="burger__list-link">Выполненные кухни</a></li>
-                    <li class="burger__list-item"><a href="#" class="burger__list-link">Спальные комнты</a></li>
-                    <li class="burger__list-item"><a href="#" class="burger__list-link">Гардеробные</a></li>
-                    <li class="burger__list-item"><a href="#" class="burger__list-link">Для ванных комнат</a></li>
+                    <li class="burger__list-item"><a href="index.html" class="burger__list-link">Главная</a></li>
+                    <li class="burger__list-item"><a href="#test" class="burger__list-link">Рассчитать стоимость</a></li>
+                    <li class="burger__list-item"><a href="index.html#plates" class="burger__list-link">Фасады</a></li>
+                    <li class="burger__list-item"><a href="index.html#complete" class="burger__list-link">Выполненные кухни</a></li>
+                    <li class="burger__list-item"><a href="index.html#gallery-room" class="burger__list-link">Спальные комнты</a></li>
+                    <li class="burger__list-item"><a href="index.html#gallery-wardrob" class="burger__list-link">Гардеробные</a></li>
+                    <li class="burger__list-item"><a href="index.html#gallery-bathroom" class="burger__list-link">Для ванных комнат</a></li>
                     <li class="burger__list-item"><a href="#" class="burger__list-link">Контакты</a></li>
                 </ul>
             </nav>
@@ -125,7 +125,7 @@
                 </div>
             </div>
         </section>
-        <section class="test-examples">
+        <section class="test-examples" id="test">
             <div class="container">
                 <div class="test-examples__inner">
                     <h2 class="test-examples__title sub-title">
@@ -134,8 +134,8 @@
                     <p class="test-examples__text">
                         Пройдите тест из <span>6 вопросов</span> и наш менеджер с вами свяжется
                     </p>
-                    <form action="#" class="test__form form">
-                        <fieldset class="step active form__wrapper ">
+                    <form class="test__form form">
+                        <fieldset class="step active form__wrapper">
                             <div class="form__counter">
                                 Вопрос <span>1/6</span>
                             </div>
@@ -143,8 +143,8 @@
                                 <legend class="form__box-title">
                                     Выберите тип кухни
                                 </legend>
-                                <div class="form__radio radio"> <input id="radio-1" type="radio"
-                                        class="radio-input visually-hidden " checked name="type">
+                                <div class="form__radio radio"> <input value="Угловая" id="radio-1" type="radio"
+                                        class="radio-input visually-hidden " name="type_kitchen">
                                     <label for="radio-1" class="radio-label">
                                         <div class="radio-wrapper">
                                             <span class="radio-wrapper__item"></span>
@@ -154,8 +154,8 @@
                                     </label>
 
                                 </div>
-                                <div class="form__radio radio"> <input id="radio-2" type="radio"
-                                        class="radio-input visually-hidden " name="type">
+                                <div class="form__radio radio"> <input value="Прямая" id="radio-2" type="radio"
+                                        class="radio-input visually-hidden " name="type_kitchen">
                                     <label for="radio-2" class="radio-label">
                                         <div class="radio-wrapper">
                                             <span class="radio-wrapper__item"></span>
@@ -165,8 +165,8 @@
                                     </label>
 
                                 </div>
-                                <div class="form__radio radio"> <input id="radio-3" type="radio"
-                                        class="radio-input visually-hidden" name="type">
+                                <div class="form__radio radio"> <input value="П=образная" id="radio-3" type="radio"
+                                        class="radio-input visually-hidden" name="type_kitchen">
 
                                     <label for="radio-3" class="radio-label">
                                         <div class="radio-wrapper">
@@ -176,7 +176,7 @@
                                         <img src="images/form-radio1-picture1.png" alt="kitchen type one">
                                     </label>
                                 </div>
-                                <button class="button form__button " type="button">Далее</button>
+                                <button class="button button-grey  form__button " disabled type="button">Далее</button>
                             </div>
                         </fieldset>
                         <fieldset class="form__wrapper step">
@@ -187,8 +187,8 @@
                                 <legend class="form__box-title">
                                     Выберите фасад
                                 </legend>
-                                <div class="form__radio radio"> <input id="radio-4" type="radio"
-                                        class="radio-input visually-hidden" name="facade">
+                                <div class="form__radio radio"> <input value="МДФ крашенный" id="radio-4" type="radio"
+                                        class="radio-input visually-hidden" name="type_facade">
                                     <label for="radio-4" class="radio-label">
                                         <div class="radio-wrapper">
                                             <span class="radio-wrapper__item"></span>
@@ -198,8 +198,8 @@
                                     </label>
 
                                 </div>
-                                <div class="form__radio radio"> <input id="radio-5" type="radio"
-                                        class="radio-input visually-hidden " name="facade">
+                                <div class="form__radio radio"> <input value="МДФ плёночный" id="radio-5" type="radio"
+                                        class="radio-input visually-hidden " name="type_facade">
                                     <label for="radio-5" class="radio-label">
                                         <div class="radio-wrapper">
                                             <span class="radio-wrapper__item"></span>
@@ -209,8 +209,8 @@
                                     </label>
 
                                 </div>
-                                <div class="form__radio radio"> <input id="radio-6" type="radio"
-                                        class="radio-input visually-hidden" name="facade">
+                                <div class="form__radio radio"> <input value="Шпонированный МДФ" id="radio-6"
+                                        type="radio" class="radio-input visually-hidden" name="type_facade">
 
                                     <label for="radio-6" class="radio-label">
                                         <div class="radio-wrapper">
@@ -222,7 +222,7 @@
                                 </div>
                                 <div class="button-wrapper"> <button class="button-back back"
                                         type="button">Назад</button>
-                                    <button class="button-grey form__button" type="button">Далее</button>
+                                    <button class="button-grey form__button" disabled type="button">Далее</button>
                                 </div>
 
                             </div>
@@ -235,8 +235,8 @@
                                 <legend class="form__box-title">
                                     Выберите фурнитуру
                                 </legend>
-                                <div class="form__radio radio"> <input id="radio-7" type="radio"
-                                        class="radio-input visually-hidden" name="implement">
+                                <div class="form__radio radio"> <input value="Boyard (бюджетный вариант)" id="radio-7"
+                                        type="radio" class="radio-input visually-hidden" name="type_implement">
                                     <label for="radio-7" class="radio-label">
                                         <div class="radio-wrapper">
                                             <span class="radio-wrapper__item"></span>
@@ -246,8 +246,8 @@
                                     </label>
 
                                 </div>
-                                <div class="form__radio radio"> <input id="radio-8" type="radio"
-                                        class="radio-input visually-hidden " name="implement">
+                                <div class="form__radio radio"> <input value="Blum Австрийская фурнитура" id="radio-8"
+                                        type="radio" class="radio-input visually-hidden " name="type_implement">
                                     <label for="radio-8" class="radio-label">
                                         <div class="radio-wrapper">
                                             <span class="radio-wrapper__item"></span>
@@ -257,8 +257,8 @@
                                     </label>
 
                                 </div>
-                                <div class="form__radio radio"> <input id="radio-9" type="radio"
-                                        class="radio-input visually-hidden" name="implement">
+                                <div class="form__radio radio"> <input value="Hettich немецкая фурнитура" id="radio-9"
+                                        type="radio" class="radio-input visually-hidden" name="type_implement">
 
                                     <label for="radio-9" class="radio-label">
                                         <div class="radio-wrapper">
@@ -270,7 +270,7 @@
                                 </div>
                                 <div class="button-wrapper"> <button class="button-back back"
                                         type="button">Назад</button>
-                                    <button class="button-grey form__button" type="button">Далее</button>
+                                    <button class="button-grey form__button" disabled type="button">Далее</button>
                                 </div>
 
                             </div>
@@ -283,8 +283,8 @@
                                 <legend class="form__box-title">
                                     Выберите столешницу
                                 </legend>
-                                <div class="form__radio radio"> <input id="radio-10" type="radio"
-                                        class="radio-input visually-hidden" name="tabletop">
+                                <div class="form__radio radio"> <input value="Кедр" id="radio-10" type="radio"
+                                        class="radio-input visually-hidden" name="type_tabletop">
                                     <label for="radio-10" class="radio-label">
                                         <div class="radio-wrapper">
                                             <span class="radio-wrapper__item"></span>
@@ -294,8 +294,8 @@
                                     </label>
 
                                 </div>
-                                <div class="form__radio radio"> <input id="radio-11" type="radio"
-                                        class="radio-input visually-hidden " name="tabletop">
+                                <div class="form__radio radio"> <input value="Эггер" id="radio-11" type="radio"
+                                        class="radio-input visually-hidden " name="type_tabletop">
                                     <label for="radio-11" class="radio-label">
                                         <div class="radio-wrapper">
                                             <span class="radio-wrapper__item"></span>
@@ -305,20 +305,20 @@
                                     </label>
 
                                 </div>
-                                <div class="form__radio radio"> <input id="radio-12" type="radio"
-                                        class="radio-input visually-hidden" name="tabletop">
+                                <div class="form__radio radio"> <input value="Искусственный камень (качество)"
+                                        id="radio-12" type="radio" class="radio-input visually-hidden"
+                                        name="type_tabletop">
 
                                     <label for="radio-12" class="radio-label">
                                         <div class="radio-wrapper">
                                             <span class="radio-wrapper__item"></span>
                                         </div>
-                                        <span class="radio-text">Искусственный камень (качество)</span>
-
+                                        <span class="radio-text radio-text_fsz">Искусственный камень (качество)</span>
                                     </label>
                                 </div>
                                 <div class="button-wrapper"> <button class="button-back back"
                                         type="button">Назад</button>
-                                    <button class="button-grey form__button" type="button">Далее</button>
+                                    <button class="button-grey form__button" disabled type="button">Далее</button>
                                 </div>
 
                             </div>
@@ -328,14 +328,15 @@
                                 Вопрос <span>5/6</span>
                             </div>
                             <div class="form__box">
-                                <legend class="form__box-title">
+                                <legend class="form__box-title form__box-title_margin">
                                     Напишите приблизительну длинну <br>
                                     в метрах
                                 </legend>
-                                <input type="number" class="form__input-number input-number" min="1">
+                                <input type="number" class="input-simple form__input-number input-number" min="1"
+                                    name="length">
                                 <div class="button-wrapper"> <button class="button-back back"
                                         type="button">Назад</button>
-                                    <button class="button-grey form__button" type="button">Далее</button>
+                                    <button disabled class="button-grey form__button" type="button">Далее</button>
                                 </div>
 
                             </div>
@@ -346,21 +347,24 @@
                             </div>
                             <div class="form__box">
                                 <legend class="form__box-title">
-                                    Напишите приблизительну длинну <br>
-                                    в метрах
+                                    Ваши данные
                                 </legend>
                                 <label class="label-text" for="text">Ваше имя</label>
-                                <input id="text" type="text" class="form__input-text input-text" placeholder="Мухамед">
+                                <input name="name1" id="text" type="text"
+                                    class="form__input-text input-simple input-text" placeholder="Мухамед">
                                 <label class="label-tel" for="tel">Ваше имя</label>
-                                <input id="tel" type="tel" class="form__input-tel input-tel"
+                                <input name="tel1" id="tel" type="tel"
+                                    class="form__input-tel input-tel input-tel_margin input-simple"
                                     placeholder="+7 707 775 7722">
                                 <div class="button-wrapper"> <button class="button-back back"
                                         type="button">Назад</button>
-                                    <button class="button-grey form__button" type="button">Отправить</button>
+                                    <button disabled class="button-grey form__button  main-btn"
+                                        type="submit">Отправить</button>
                                 </div>
 
                             </div>
                         </fieldset>
+
                         <fieldset class="form__finish step">
                             <img class="form__finish-image" src="images/form-finish-picture.png" alt="finish">
                             <p class="form__finish-text">
@@ -373,7 +377,7 @@
             </div>
         </section>
     </main>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js?=1647794112676"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js?=1647944995699"></script>
     <footer class="footer">
     <div class="footer__decoration"><svg width="76" height="139" viewBox="0 0 76 139" fill="none"
             xmlns="http://www.w3.org/2000/svg">
@@ -412,8 +416,8 @@
     </div>
 </footer>
 
-    <script src="js/vendor.min.js?=1647794112676"></script>
-<script src="js/main.min.js?=1647794112676"></script>
+    <script src="js/vendor.min.js?=1647944995699"></script>
+<script src="js/main.min.js?=1647944995699"></script>
 </body>
 
 </html>

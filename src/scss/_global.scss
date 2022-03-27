@@ -141,6 +141,9 @@ input {
     &:hover {
         background-color: #f88600;
     }
+    &.orange{
+        background-color: #f88600;
+    }
     @media screen and (max-width: 499px) {
         max-width: 119px;
         height: 40px;
